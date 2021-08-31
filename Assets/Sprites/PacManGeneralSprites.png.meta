@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1718046273260594429
-    second: PacManMoveRight0
+    second: PacManRight0
   - first:
       213: -974038771263099670
-    second: PacManMoveRight1
+    second: PacManRight1
   - first:
       213: 7468154749687078733
-    second: PacManGeneralSprites_2
+    second: PacManDeath0
   - first:
       213: 7041301347199288780
-    second: PacManGeneralSprites_3
+    second: PacManDeath1
   - first:
       213: 4392170922877274288
-    second: PacManGeneralSprites_4
+    second: PacManDeath2
   - first:
       213: -4400058224042674396
-    second: PacManGeneralSprites_5
+    second: PacManDeath3
   - first:
       213: 1650554507857116874
-    second: PacManGeneralSprites_6
+    second: PacManDeath4
   - first:
       213: -4892115491254301952
-    second: PacManGeneralSprites_7
+    second: PacManDeath5
   - first:
       213: 6421994706339039428
-    second: PacManGeneralSprites_8
+    second: PacManDeath6
   - first:
       213: -4123028066781535083
-    second: PacManGeneralSprites_9
+    second: PacManDeath7
   - first:
       213: 1817952761884771312
-    second: PacManGeneralSprites_10
+    second: PacManDeath8
   - first:
       213: -762652189485934531
-    second: PacManGeneralSprites_11
+    second: PacManDeath9
   - first:
       213: -4310370638837676948
-    second: PacManGeneralSprites_12
+    second: PacManDeath10
   - first:
       213: 4775336616252137222
-    second: PacManGeneralSprites_13
+    second: PacManDeath11
   - first:
       213: 1293410967067710856
-    second: PacManMoveLeft0
+    second: PacManLeft0
   - first:
       213: -9008301448824933096
-    second: PacManMoveLeft1
+    second: PacManLeft1
   - first:
       213: -1363571399280870865
     second: PacManGeneralSprites_16
@@ -73,10 +73,10 @@ TextureImporter:
     second: PacManGeneralSprites_22
   - first:
       213: 2009947457782028416
-    second: PacManMoveUp0
+    second: PacManUp0
   - first:
       213: -6677236884001646222
-    second: PacManMoveUp1
+    second: PacManUp1
   - first:
       213: -9208079586807589037
     second: PacManGeneralSprites_25
@@ -97,10 +97,10 @@ TextureImporter:
     second: PacManGeneralSprites_30
   - first:
       213: 1462537217536670393
-    second: PacManMoveDown0
+    second: PacManDown0
   - first:
       213: 5173191457845766781
-    second: PacManMoveDown1
+    second: PacManDown1
   - first:
       213: 4542911565790440089
     second: PacManGeneralSprites_33
@@ -127,34 +127,34 @@ TextureImporter:
     second: PacManGeneralSprites_40
   - first:
       213: -1159960830317992965
-    second: PacManGeneralSprites_41
+    second: BlinkyRight0
   - first:
       213: -8140269775938433241
-    second: PacManGeneralSprites_42
+    second: BlinkyRight1
   - first:
       213: -5056042264104146726
-    second: PacManGeneralSprites_43
+    second: BlinkyLeft0
   - first:
       213: -2959532760151183409
-    second: PacManGeneralSprites_44
+    second: BlinkyLeft1
   - first:
       213: 4580419184948366488
-    second: PacManGeneralSprites_45
+    second: BlinkyUp0
   - first:
       213: 7839001153716206878
-    second: PacManGeneralSprites_46
+    second: BlinkyUp1
   - first:
       213: 3648772353229375366
-    second: PacManGeneralSprites_47
+    second: BlinkyDown0
   - first:
       213: -6286986764009033286
-    second: PacManGeneralSprites_48
+    second: BlinkyDown1
   - first:
       213: -5817894103894216923
-    second: PacManGeneralSprites_49
+    second: GhostVulnerable0
   - first:
       213: -395707726486844633
-    second: PacManGeneralSprites_50
+    second: GhostVulnerable1
   - first:
       213: -9201078040123189744
     second: PacManGeneralSprites_51
@@ -163,64 +163,64 @@ TextureImporter:
     second: PacManGeneralSprites_52
   - first:
       213: 7385781980239065708
-    second: PacManGeneralSprites_53
+    second: PinkyRight0
   - first:
       213: 7166159120457449911
-    second: PacManGeneralSprites_54
+    second: PinkyRight1
   - first:
       213: 4429766850313063468
-    second: PacManGeneralSprites_55
+    second: PinkyLeft0
   - first:
       213: 3489779155066808153
-    second: PacManGeneralSprites_56
+    second: PinkyLeft1
   - first:
       213: -2428219480739129149
-    second: PacManGeneralSprites_57
+    second: PinkyUp0
   - first:
       213: 8307408903166577413
-    second: PacManGeneralSprites_58
+    second: PinkyUp1
   - first:
       213: -5326484498742391894
-    second: PacManGeneralSprites_59
+    second: PinkyDown0
   - first:
       213: 5179969188351674755
-    second: PacManGeneralSprites_60
+    second: PinkyDown1
   - first:
       213: 6716490546775659867
-    second: PacManGeneralSprites_61
+    second: GhostEyesRight
   - first:
       213: 4538964475354654043
-    second: PacManGeneralSprites_62
+    second: GhostEyesLeft
   - first:
       213: -4445439533034910530
-    second: PacManGeneralSprites_63
+    second: GhostEyesUp
   - first:
       213: 8510890541521274717
-    second: PacManGeneralSprites_64
+    second: GhostEyesDown
   - first:
       213: -5957306671314902967
-    second: PacManGeneralSprites_65
+    second: InkyRight0
   - first:
       213: 6781334222381922521
-    second: PacManGeneralSprites_66
+    second: InkyRight1
   - first:
       213: 9220035211359391087
-    second: PacManGeneralSprites_67
+    second: InkyLeft0
   - first:
       213: -7152267823479533446
-    second: PacManGeneralSprites_68
+    second: InkyLeft1
   - first:
       213: 3920303714183358647
-    second: PacManGeneralSprites_69
+    second: InkyUp0
   - first:
       213: 3772443503500637090
-    second: PacManGeneralSprites_70
+    second: InkyUp1
   - first:
       213: -2344721990856493013
-    second: PacManGeneralSprites_71
+    second: InkyDown0
   - first:
       213: 8838194951919465465
-    second: PacManGeneralSprites_72
+    second: InkyDown1
   - first:
       213: -1184128776708933193
     second: PacManGeneralSprites_73
@@ -238,28 +238,28 @@ TextureImporter:
     second: PacManGeneralSprites_77
   - first:
       213: -2565382251440171282
-    second: PacManGeneralSprites_78
+    second: ClydeRight0
   - first:
       213: -7683046328155151185
-    second: PacManGeneralSprites_79
+    second: ClydeRight1
   - first:
       213: 4490143181404186751
-    second: PacManGeneralSprites_80
+    second: ClydeLeft0
   - first:
       213: -5978304241744062754
-    second: PacManGeneralSprites_81
+    second: ClydeLeft1
   - first:
       213: 5270305879989274882
-    second: PacManGeneralSprites_82
+    second: ClydeUp0
   - first:
       213: 6527220769857733571
-    second: PacManGeneralSprites_83
+    second: ClydeUp1
   - first:
       213: 7216774324348239545
-    second: PacManGeneralSprites_84
+    second: ClydeDown0
   - first:
       213: -1432733719132120908
-    second: PacManGeneralSprites_85
+    second: ClydeDown1
   - first:
       213: 5644214524473140072
     second: PacManGeneralSprites_86
@@ -361,7 +361,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PacManMoveRight0
+      name: PacManRight0
       rect:
         serializedVersion: 2
         x: 0
@@ -382,7 +382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManMoveRight1
+      name: PacManRight1
       rect:
         serializedVersion: 2
         x: 16
@@ -403,7 +403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_2
+      name: PacManDeath0
       rect:
         serializedVersion: 2
         x: 32
@@ -424,7 +424,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_3
+      name: PacManDeath1
       rect:
         serializedVersion: 2
         x: 48
@@ -445,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_4
+      name: PacManDeath2
       rect:
         serializedVersion: 2
         x: 64
@@ -466,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_5
+      name: PacManDeath3
       rect:
         serializedVersion: 2
         x: 80
@@ -487,7 +487,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_6
+      name: PacManDeath4
       rect:
         serializedVersion: 2
         x: 96
@@ -508,7 +508,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_7
+      name: PacManDeath5
       rect:
         serializedVersion: 2
         x: 112
@@ -529,7 +529,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_8
+      name: PacManDeath6
       rect:
         serializedVersion: 2
         x: 128
@@ -550,7 +550,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_9
+      name: PacManDeath7
       rect:
         serializedVersion: 2
         x: 144
@@ -571,7 +571,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_10
+      name: PacManDeath8
       rect:
         serializedVersion: 2
         x: 160
@@ -592,7 +592,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_11
+      name: PacManDeath9
       rect:
         serializedVersion: 2
         x: 176
@@ -613,7 +613,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_12
+      name: PacManDeath10
       rect:
         serializedVersion: 2
         x: 192
@@ -634,7 +634,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_13
+      name: PacManDeath11
       rect:
         serializedVersion: 2
         x: 208
@@ -655,7 +655,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManMoveLeft0
+      name: PacManLeft0
       rect:
         serializedVersion: 2
         x: 0
@@ -676,7 +676,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManMoveLeft1
+      name: PacManLeft1
       rect:
         serializedVersion: 2
         x: 16
@@ -844,7 +844,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManMoveUp0
+      name: PacManUp0
       rect:
         serializedVersion: 2
         x: 0
@@ -865,7 +865,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManMoveUp1
+      name: PacManUp1
       rect:
         serializedVersion: 2
         x: 16
@@ -1012,7 +1012,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManMoveDown0
+      name: PacManDown0
       rect:
         serializedVersion: 2
         x: 0
@@ -1033,7 +1033,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManMoveDown1
+      name: PacManDown1
       rect:
         serializedVersion: 2
         x: 16
@@ -1222,7 +1222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_41
+      name: BlinkyRight0
       rect:
         serializedVersion: 2
         x: 0
@@ -1243,7 +1243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_42
+      name: BlinkyRight1
       rect:
         serializedVersion: 2
         x: 16
@@ -1264,7 +1264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_43
+      name: BlinkyLeft0
       rect:
         serializedVersion: 2
         x: 32
@@ -1285,7 +1285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_44
+      name: BlinkyLeft1
       rect:
         serializedVersion: 2
         x: 48
@@ -1306,7 +1306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_45
+      name: BlinkyUp0
       rect:
         serializedVersion: 2
         x: 64
@@ -1327,7 +1327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_46
+      name: BlinkyUp1
       rect:
         serializedVersion: 2
         x: 80
@@ -1348,7 +1348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_47
+      name: BlinkyDown0
       rect:
         serializedVersion: 2
         x: 96
@@ -1369,7 +1369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_48
+      name: BlinkyDown1
       rect:
         serializedVersion: 2
         x: 112
@@ -1390,7 +1390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_49
+      name: GhostVulnerable0
       rect:
         serializedVersion: 2
         x: 128
@@ -1411,7 +1411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_50
+      name: GhostVulnerable1
       rect:
         serializedVersion: 2
         x: 144
@@ -1474,7 +1474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_53
+      name: PinkyRight0
       rect:
         serializedVersion: 2
         x: 0
@@ -1495,7 +1495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_54
+      name: PinkyRight1
       rect:
         serializedVersion: 2
         x: 16
@@ -1516,7 +1516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_55
+      name: PinkyLeft0
       rect:
         serializedVersion: 2
         x: 32
@@ -1537,7 +1537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_56
+      name: PinkyLeft1
       rect:
         serializedVersion: 2
         x: 48
@@ -1558,7 +1558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_57
+      name: PinkyUp0
       rect:
         serializedVersion: 2
         x: 64
@@ -1579,7 +1579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_58
+      name: PinkyUp1
       rect:
         serializedVersion: 2
         x: 80
@@ -1600,7 +1600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_59
+      name: PinkyDown0
       rect:
         serializedVersion: 2
         x: 96
@@ -1621,7 +1621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_60
+      name: PinkyDown1
       rect:
         serializedVersion: 2
         x: 112
@@ -1642,7 +1642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_61
+      name: GhostEyesRight
       rect:
         serializedVersion: 2
         x: 128
@@ -1663,7 +1663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_62
+      name: GhostEyesLeft
       rect:
         serializedVersion: 2
         x: 144
@@ -1684,7 +1684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_63
+      name: GhostEyesUp
       rect:
         serializedVersion: 2
         x: 160
@@ -1705,7 +1705,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_64
+      name: GhostEyesDown
       rect:
         serializedVersion: 2
         x: 176
@@ -1726,7 +1726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_65
+      name: InkyRight0
       rect:
         serializedVersion: 2
         x: 0
@@ -1747,7 +1747,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_66
+      name: InkyRight1
       rect:
         serializedVersion: 2
         x: 16
@@ -1768,7 +1768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_67
+      name: InkyLeft0
       rect:
         serializedVersion: 2
         x: 32
@@ -1789,7 +1789,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_68
+      name: InkyLeft1
       rect:
         serializedVersion: 2
         x: 48
@@ -1810,7 +1810,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_69
+      name: InkyUp0
       rect:
         serializedVersion: 2
         x: 64
@@ -1831,7 +1831,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_70
+      name: InkyUp1
       rect:
         serializedVersion: 2
         x: 80
@@ -1852,7 +1852,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_71
+      name: InkyDown0
       rect:
         serializedVersion: 2
         x: 96
@@ -1873,7 +1873,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_72
+      name: InkyDown1
       rect:
         serializedVersion: 2
         x: 112
@@ -1999,7 +1999,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_78
+      name: ClydeRight0
       rect:
         serializedVersion: 2
         x: 0
@@ -2020,7 +2020,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_79
+      name: ClydeRight1
       rect:
         serializedVersion: 2
         x: 16
@@ -2041,7 +2041,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_80
+      name: ClydeLeft0
       rect:
         serializedVersion: 2
         x: 32
@@ -2062,7 +2062,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_81
+      name: ClydeLeft1
       rect:
         serializedVersion: 2
         x: 48
@@ -2083,7 +2083,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_82
+      name: ClydeUp0
       rect:
         serializedVersion: 2
         x: 64
@@ -2104,7 +2104,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_83
+      name: ClydeUp1
       rect:
         serializedVersion: 2
         x: 80
@@ -2125,7 +2125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_84
+      name: ClydeDown0
       rect:
         serializedVersion: 2
         x: 96
@@ -2146,7 +2146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacManGeneralSprites_85
+      name: ClydeDown1
       rect:
         serializedVersion: 2
         x: 112

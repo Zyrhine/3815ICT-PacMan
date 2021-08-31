@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PacManMoveLeft
+  m_Name: ClydeLeft
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1293410967067710856, guid: d683a437d7719054bbff5465397094d0, type: 3}
+      value: {fileID: 4490143181404186751, guid: d683a437d7719054bbff5465397094d0, type: 3}
     - time: 0.083333336
-      value: {fileID: -9008301448824933096, guid: d683a437d7719054bbff5465397094d0, type: 3}
+      value: {fileID: -5978304241744062754, guid: d683a437d7719054bbff5465397094d0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1293410967067710856, guid: d683a437d7719054bbff5465397094d0, type: 3}
-    - {fileID: -9008301448824933096, guid: d683a437d7719054bbff5465397094d0, type: 3}
+    - {fileID: 4490143181404186751, guid: d683a437d7719054bbff5465397094d0, type: 3}
+    - {fileID: -5978304241744062754, guid: d683a437d7719054bbff5465397094d0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

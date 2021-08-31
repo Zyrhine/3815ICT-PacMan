@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 933998061310402449}
   - component: {fileID: 6448504108372892693}
+  - component: {fileID: 2242334092669817204}
   - component: {fileID: 5684719871031550574}
   - component: {fileID: 6267740068747551082}
+  - component: {fileID: 2401091658124236056}
   m_Layer: 0
-  m_Name: Ghost
+  m_Name: Ghost (Base)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8140269775938433241, guid: d683a437d7719054bbff5465397094d0, type: 3}
+  m_Sprite: {fileID: 6716490546775659867, guid: d683a437d7719054bbff5465397094d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +86,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2242334092669817204
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649402621531366885}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a5c541ec4f97ff34784f6644a0368053, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &5684719871031550574
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -94,7 +115,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 04d27c0dd27125649b088868388243a5, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -122,3 +143,21 @@ NavMeshAgent:
   m_BaseOffset: 0.25
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
+--- !u!114 &2401091658124236056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649402621531366885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f365e33c9c8b27439e13e00ee39b457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SearchSpeed: 1
+  ChaseSpeed: 2
+  target: {fileID: 0}
+  isSmart: 0
+  homeWaypoint: {fileID: 0}
+  Maze: {fileID: 0}
