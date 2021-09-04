@@ -4,6 +4,8 @@
 </p>
 
 ## Getting Started
+Currently supported platforms are Windows and Android. 
+
 ### Prerequisites
 * Unity 2020.3.14f1 (LTS)
 
@@ -23,4 +25,5 @@
 - Yahya Al-Washahi
 
 ### Credits
-Game sprites sourced from [Spriters Resource - Pac-Man](https://www.spriters-resource.com/arcade/pacman/).
+- Game sprites sourced from [Spriters Resource - Pac-Man](https://www.spriters-resource.com/arcade/pacman/).
+- NavMesh compatability on Unity Tilemaps from [NavMeshPlus] https://github.com/h8man/NavMeshPlus
