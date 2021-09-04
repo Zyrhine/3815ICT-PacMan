@@ -18,6 +18,7 @@ public class PacMan : MonoBehaviour
     }
     private Rigidbody2D rb;
     private Animator anim;
+    private Vector2 startPos;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,13 @@ public class PacMan : MonoBehaviour
     void FixedUpdate()
     {
         // Get directional input
-        GetInput();
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            GetTouchInput();
+        } else
+        {
+            GetKeyboardInput();
+        }
 
         // If the direction has been changed, change direction if PacMan is able to
         if (moveDirection != queueDirection)
@@ -48,7 +55,7 @@ public class PacMan : MonoBehaviour
     }
 
     // Gets the movement direction from input
-    public void GetInput()
+    public void GetKeyboardInput()
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -65,6 +72,43 @@ public class PacMan : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             queueDirection = MoveDirection.Up;
+        }
+    }
+
+    public void GetTouchInput()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    // Record initial touch position.
+                    startPos = touch.position;
+                    break;
+
+                case TouchPhase.Ended:
+                    Vector2 endPos = touch.position;
+                    Vector2 direction = endPos - startPos;
+                    direction.Normalize();
+
+                    if (direction.x > 0.5f)
+                    {
+                        queueDirection = MoveDirection.Right;
+                    } else if (direction.x < -0.5f)
+                    {
+                        queueDirection = MoveDirection.Left;
+                    } else if (direction.y > 0.5f)
+                    {
+                        queueDirection = MoveDirection.Up;
+                    } else if (direction.y < -0.5f)
+                    {
+                        queueDirection = MoveDirection.Down;
+                    }
+
+                    break;
+            }
         }
     }
 
