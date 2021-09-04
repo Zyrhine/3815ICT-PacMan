@@ -26,4 +26,4 @@ Currently supported platforms are Windows and Android.
 
 ### Credits
 - Game sprites sourced from [Spriters Resource - Pac-Man](https://www.spriters-resource.com/arcade/pacman/).
-- NavMesh compatability on Unity Tilemaps from [NavMeshPlus] https://github.com/h8man/NavMeshPlus
+- NavMesh compatability on Unity Tilemaps from [NavMeshPlus](https://github.com/h8man/NavMeshPlus).
