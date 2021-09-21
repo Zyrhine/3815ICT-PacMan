@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class Menu : MonoBehaviour
+/// <summary>
+/// The controller for the main menu.
+/// </summary>
+public class MenuController : MonoBehaviour
 {
     public GameObject MainPanel;
     public GameObject ConfigurePanel;

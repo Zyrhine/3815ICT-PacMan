@@ -1,30 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PacMan : MonoBehaviour
+/// <summary>
+/// The controller for PacMan.
+/// </summary>
+public class PacManController : MonoBehaviour
 {
-    public float MoveSpeed = 5f;
-    private MoveDirection queueDirection;
-    private MoveDirection _moveDirection;
-    private MoveDirection moveDirection
-    {
-        get => _moveDirection;
-        set
-        {
-            _moveDirection = value;
-            anim.SetInteger("Direction", (int)value);
-        }
-    }
+    private PacManModel model;
+    private GameObject PacMan;
     private Rigidbody2D rb;
     private Animator anim;
-    private Vector2 startPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        model = GameObject.FindGameObjectWithTag("Model").GetComponent<PacManModel>();
+        PacMan = GameObject.Find("view/PacMan");
+        rb = PacMan.GetComponent<Rigidbody2D>();
+        anim = PacMan.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,23 +26,25 @@ public class PacMan : MonoBehaviour
         if (Application.platform == RuntimePlatform.Android)
         {
             GetTouchInput();
-        } else
+        }
+        else
         {
             GetKeyboardInput();
         }
 
         // If the direction has been changed, change direction if PacMan is able to
-        if (moveDirection != queueDirection)
+        if (model.moveDirection != model.queueDirection)
         {
-            if (!Physics2D.Raycast(rb.position, DirectionToVector(queueDirection), 0.16f))
+            if (!Physics2D.Raycast(rb.position, DirectionToVector(model.queueDirection), 0.16f))
             {
-                moveDirection = queueDirection;
+                model.moveDirection = model.queueDirection;
+                anim.SetInteger("Direction", (int)model.moveDirection);
             }
         }
 
         // Move in the direction
-        Vector2 dir = DirectionToVector(moveDirection);
-        Vector2 pos = rb.position + (dir * MoveSpeed * Time.fixedDeltaTime);
+        Vector2 dir = DirectionToVector(model.moveDirection);
+        Vector2 pos = rb.position + (dir * model.MoveSpeed * Time.fixedDeltaTime);
         rb.MovePosition(pos);
     }
 
@@ -59,19 +53,19 @@ public class PacMan : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            queueDirection = MoveDirection.Right;
+            model.queueDirection = MoveDirection.Right;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            queueDirection = MoveDirection.Down;
+            model.queueDirection = MoveDirection.Down;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            queueDirection = MoveDirection.Left;
+            model.queueDirection = MoveDirection.Left;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            queueDirection = MoveDirection.Up;
+            model.queueDirection = MoveDirection.Up;
         }
     }
 
@@ -85,28 +79,30 @@ public class PacMan : MonoBehaviour
             {
                 case TouchPhase.Began:
                     // Record initial touch position.
-                    startPos = touch.position;
+                    model.touchStartPos = touch.position;
                     break;
 
                 case TouchPhase.Ended:
                     Vector2 endPos = touch.position;
-                    Vector2 direction = endPos - startPos;
+                    Vector2 direction = endPos - model.touchStartPos;
                     direction.Normalize();
 
                     if (direction.x > 0.5f)
                     {
-                        queueDirection = MoveDirection.Right;
-                    } else if (direction.x < -0.5f)
-                    {
-                        queueDirection = MoveDirection.Left;
-                    } else if (direction.y > 0.5f)
-                    {
-                        queueDirection = MoveDirection.Up;
-                    } else if (direction.y < -0.5f)
-                    {
-                        queueDirection = MoveDirection.Down;
+                        model.queueDirection = MoveDirection.Right;
                     }
-
+                    else if (direction.x < -0.5f)
+                    {
+                        model.queueDirection = MoveDirection.Left;
+                    }
+                    else if (direction.y > 0.5f)
+                    {
+                        model.queueDirection = MoveDirection.Up;
+                    }
+                    else if (direction.y < -0.5f)
+                    {
+                        model.queueDirection = MoveDirection.Down;
+                    }
                     break;
             }
         }

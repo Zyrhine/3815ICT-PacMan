@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Maze
+  - Model
+  - Controller
+  - View
   layers:
   - Default
   - TransparentFX

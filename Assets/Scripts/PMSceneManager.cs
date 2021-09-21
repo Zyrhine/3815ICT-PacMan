@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// The manager for the scenes in the game.
+/// </summary>
 public class PMSceneManager : MonoBehaviour
 {
     public static bool isRandomMaze = false;
