@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class PMSceneManager : MonoBehaviour
 {
-    public static bool isRandomMaze = false;
+    public static bool isRandomMaze = true;
+
+    public static void SetRandom(bool value) { isRandomMaze = value; }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
     public void LoadMaze()
     {

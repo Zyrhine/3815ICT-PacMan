@@ -1,13 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
-///<summary>
-/// The model containing the data for all ghosts in a scene.
-///</summary>
-public class GhostModel : MonoBehaviour
+public class Test : MonoBehaviour
 {
-    public List<Ghost> Ghosts = new List<Ghost>();
-    public bool IsEnabled = false;
+    public Tilemap tilemap;
 
     // Start is called before the first frame update
     void Start()
@@ -20,4 +18,5 @@ public class GhostModel : MonoBehaviour
     {
         
     }
+
 }

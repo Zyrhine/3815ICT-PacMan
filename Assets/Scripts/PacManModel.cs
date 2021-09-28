@@ -9,4 +9,7 @@ public class PacManModel : MonoBehaviour
     public MoveDirection queueDirection;
     public MoveDirection moveDirection;
     public Vector2 touchStartPos;
+    public bool IsEnabled = false;
+    public int Score = 0;
+    public int Lives = 3;
 }

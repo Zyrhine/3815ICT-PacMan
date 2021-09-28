@@ -39,9 +39,16 @@ public class GhostController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!model.IsEnabled) return;
+
         foreach(Ghost ghost in model.Ghosts)
         {
             ghost.Destination = ghost.Agent.destination;
+
+            if (ghost.IsVulnerable && ghost.State != GhostState.Return)
+            {
+                ghost.State = GhostState.Return;
+            }
 
             switch (ghost.State)
             {
@@ -127,7 +134,35 @@ public class GhostController : MonoBehaviour
     // Update the return state of a ghost
     void UpdateReturn(Ghost ghost)
     {
+        Debug.Log("returning");
         ghost.Agent.SetDestination(homeWaypoint.transform.position);
+
+        // Check if reached home
+        if (Vector3.Distance(ghost.GameObject.transform.position, ghost.Agent.destination) < 0.5f)
+        {
+            ghost.IsVulnerable = false;
+            ghost.Animator.SetBool("IsVulnerable", false);
+            ghost.State = GhostState.Search;
+        }
+    }
+
+    // Reset the ghosts to home base
+    public void ResetGhosts()
+    {
+        foreach (Ghost ghost in model.Ghosts)
+        {
+            ghost.GameObject.transform.position = homeWaypoint.transform.position;
+        }
+    }
+
+    // Make the ghosts vulnerable
+    public void SetVulnerable()
+    {
+        foreach (Ghost ghost in model.Ghosts)
+        {
+            ghost.IsVulnerable = true;
+            ghost.Animator.SetBool("IsVulnerable", true);
+        }
     }
 
     void OnDrawGizmos()

@@ -9,19 +9,29 @@ public class PacManController : MonoBehaviour
     private GameObject PacMan;
     private Rigidbody2D rb;
     private Animator anim;
+    private GameManager manager;
+    private HUDController HUD;
+    private GhostController ghostController;
+    private GameObject RespawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        HUD = GetComponent<HUDController>();
+        ghostController = GetComponent<GhostController>();
         model = GameObject.FindGameObjectWithTag("Model").GetComponent<PacManModel>();
         PacMan = GameObject.Find("view/PacMan");
         rb = PacMan.GetComponent<Rigidbody2D>();
         anim = PacMan.GetComponent<Animator>();
+        RespawnPoint = GameObject.FindGameObjectWithTag("Respawn");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!model.IsEnabled) return;
+
         // Get directional input
         if (Application.platform == RuntimePlatform.Android)
         {
@@ -35,7 +45,9 @@ public class PacManController : MonoBehaviour
         // If the direction has been changed, change direction if PacMan is able to
         if (model.moveDirection != model.queueDirection)
         {
-            if (!Physics2D.Raycast(rb.position, DirectionToVector(model.queueDirection), 0.16f))
+            RaycastHit2D hit = Physics2D.Raycast(rb.position, DirectionToVector(model.queueDirection), 0.16f);
+
+            if (!hit || !hit.collider.CompareTag("Maze"))
             {
                 model.moveDirection = model.queueDirection;
                 anim.SetInteger("Direction", (int)model.moveDirection);
@@ -105,6 +117,32 @@ public class PacManController : MonoBehaviour
                     }
                     break;
             }
+        }
+    }
+
+    // Add score from pellet
+    public void AddScore()
+    {
+        model.Score += 10;
+        HUD.UpdateScore(model.Score);
+    }
+
+    // Lose a life
+    public void CapturePacMan()
+    {
+        if (model.Lives > 0)
+        {
+            model.Lives -= 1;
+            HUD.UpdateLives(model.Lives);
+            
+            // Go back to spawn
+            transform.position = RespawnPoint.transform.position;
+
+            // Reset ghosts to home
+            ghostController.ResetGhosts();
+        } else
+        {
+            manager.LoseGame();
         }
     }
 
