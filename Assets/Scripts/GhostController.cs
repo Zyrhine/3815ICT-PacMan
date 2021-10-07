@@ -70,21 +70,26 @@ public class GhostController : MonoBehaviour
     // Update the movement direction of a ghost
     void UpdateDirection(Ghost ghost)
     {
-        if (ghost.Agent.velocity.x >= 1)
+        // Find the direction of the velocity
+        if (Mathf.Abs(ghost.Agent.velocity.x) > Mathf.Abs(ghost.Agent.velocity.y))
         {
-            ghost.moveDirection = MoveDirection.Right;
-        }
-        if (ghost.Agent.velocity.x <= -1)
+            if (ghost.Agent.velocity.x >= 0)
+            {
+                ghost.moveDirection = MoveDirection.Right;
+            } else
+            {
+                ghost.moveDirection = MoveDirection.Left;
+            }
+        } else
         {
-            ghost.moveDirection = MoveDirection.Left;
-        }
-        if (ghost.Agent.velocity.y >= 1)
-        {
-            ghost.moveDirection = MoveDirection.Up;
-        }
-        if (ghost.Agent.velocity.y <= -1)
-        {
-            ghost.moveDirection = MoveDirection.Down;
+            if (ghost.Agent.velocity.y >= 0)
+            {
+                ghost.moveDirection = MoveDirection.Up;
+            }
+            else
+            {
+                ghost.moveDirection = MoveDirection.Down;
+            }
         }
 
         ghost.Animator.SetInteger("Direction", (int)ghost.moveDirection);
@@ -134,14 +139,15 @@ public class GhostController : MonoBehaviour
     // Update the return state of a ghost
     void UpdateReturn(Ghost ghost)
     {
-        Debug.Log("returning");
         ghost.Agent.SetDestination(homeWaypoint.transform.position);
 
         // Check if reached home
         if (Vector3.Distance(ghost.GameObject.transform.position, ghost.Agent.destination) < 0.5f)
         {
+            // Reset ghost state
             ghost.IsVulnerable = false;
             ghost.Animator.SetBool("IsVulnerable", false);
+            ghost.Animator.SetBool("Eaten", false);
             ghost.State = GhostState.Search;
         }
     }
@@ -152,6 +158,10 @@ public class GhostController : MonoBehaviour
         foreach (Ghost ghost in model.Ghosts)
         {
             ghost.GameObject.transform.position = homeWaypoint.transform.position;
+            ghost.IsVulnerable = false;
+            ghost.Animator.SetBool("IsVulnerable", false);
+            ghost.Animator.SetBool("Eaten", false);
+            ghost.State = GhostState.Search;
         }
     }
 

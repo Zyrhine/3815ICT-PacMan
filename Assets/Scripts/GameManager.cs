@@ -5,24 +5,28 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private GameState state = GameState.Ready;
-    private AudioSource audioSource;
+    private AudioSource sound;
     private HUDController HUD;
     public GameObject ReadyText;
 
-    // Start is called before the first frame update
+    [Header("Sounds")]
+    public AudioClip ClipStart;
+    public AudioClip ClipSiren;
+
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        sound = GetComponent<AudioSource>();
         HUD = GameObject.FindGameObjectWithTag("Controller").GetComponent<HUDController>();
-        PlayIntroMusic();
+        sound.loop = false;
+        sound.clip = ClipStart;
+        sound.Play();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (state == GameState.Ready)
         {
-            if (audioSource.time >= audioSource.clip.length)
+            if (sound.time >= sound.clip.length)
             {
                 StartGame();
             }
@@ -31,6 +35,10 @@ public class GameManager : MonoBehaviour
 
     void StartGame()
     {
+        sound.loop = true;
+        sound.clip = ClipSiren;
+        sound.Play();
+
         // Update game state
         state = GameState.Play;
         
@@ -60,12 +68,6 @@ public class GameManager : MonoBehaviour
         state = GameState.Lose;
 
         HUD.ShowLosePanel();
-    }
-
-    void PlayIntroMusic()
-    {
-        audioSource.Play();
-        //audio.time
     }
 }
 

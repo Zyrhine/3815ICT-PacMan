@@ -14,12 +14,12 @@ public class Collisions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ghost"))
         {
-            //if (ghost.IsVulernable)
             var anim = collision.gameObject.GetComponent<Animator>();
             if (anim.GetBool("IsVulnerable")) {
                 pacManController.AddScore();
+                anim.SetBool("IsVulnerable", false);
                 anim.SetBool("Eaten", true);
-            } else
+            } else if (!anim.GetBool("Eaten"))
             {
                 pacManController.CapturePacMan();
             }

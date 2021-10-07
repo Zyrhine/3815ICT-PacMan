@@ -5,7 +5,7 @@ using UnityEngine;
 /// </summary>
 public class PacManModel : MonoBehaviour
 {
-    public float MoveSpeed = 5f;
+    public float MoveSpeed = 2f;
     public MoveDirection queueDirection;
     public MoveDirection moveDirection;
     public Vector2 touchStartPos;
